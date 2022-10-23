@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raffle Ticket Randomize</title>
+    <script src = "PapaParse-5.0.2/papaparse.min.js"></script>
+</head>
+<body>
+    <div style="width:100%; margin:auto; text-align:center; position:relative;">
+        <div id = "leftHalf" style = "border:3px solid black;  width:55%; margin:1%; padding:1%;text-align:left;position:relative; display:inline-block; ">
+            <h1>Fall Fiesta Raffle</h1>
+            <h2>Upload the <b>.csv</b> file, and then click draw winners!</h2>
+            <input type = "file" id = "csvFile" accept=".csv" onchange = "createLists()">
+            
+           <!-- <button id = "createLists">Create Lists!</button> -->
+           <p>Input the number of winners you would like to draw!</p>
+
+            <input type="number" id = "inputNumbers">
+            <button id = "drawWinners">Draw Winners!</button>
+            <h2>Winners</h2>
+            <p id = "winners"></p>
+
+        </div>
+        <div id = "animation" style = "float:right; border:3px solid black;  padding:1%; margin:1%; width:35%;position:relative;">
+            <h2>WINNER(S):</h2>
+            <h2 id = "dots"></h2>
+            <ul id="winnerList">
+                
+            </ul>
+        </div>
+        <br>
+    </div>
+    <hr>
+    <p id = "Names">Names: <br></p>
+
+    <script src="script.js"></script>
+</body>
+</html>
